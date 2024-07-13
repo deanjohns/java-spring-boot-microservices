@@ -1,5 +1,6 @@
 package com.order.order.controller;
 
+import com.order.order.common.OrderResponse;
 import com.order.order.dto.OrderDTO;
 import com.order.order.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,13 +26,13 @@ public class OrderController {
     }
 
     @PostMapping("/addorder")
-    public OrderDTO saveOrder(@RequestBody OrderDTO userDTO) {
-        return orderService.saveOrder(userDTO);
+    public OrderResponse saveOrder(@RequestBody OrderDTO orderDTO) {
+        return orderService.saveOrder(orderDTO);
     }
 
     @PutMapping("/updateorder")
-    public OrderDTO updateOrder(@RequestBody OrderDTO userDTO) {
-        return orderService.updateOrder(userDTO);
+    public OrderDTO updateOrder(@RequestBody OrderDTO orderDTO) {
+        return orderService.updateOrder(orderDTO);
     }
 
     @DeleteMapping("/deleteorder/{orderId}")
