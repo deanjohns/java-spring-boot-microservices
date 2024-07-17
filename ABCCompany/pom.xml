@@ -21,6 +21,7 @@
     <module>product</module>
       <module>base</module>
     <module>discoveryserver</module>
+    <module>apigateway</module>
   </modules>
 
   <properties>
